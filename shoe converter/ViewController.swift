@@ -15,12 +15,10 @@ class ViewController: UIViewController {
     @IBOutlet weak var convertedLabel: UILabel!
     
     @IBAction func convertButtonPressed(sender: UIButton) {
-        let sizeFromTextField = menShoeSizeTextField.text
-        var numberFromTextField = sizeFromTextField.toInt()!
+        var sizeFromTextField = menShoeSizeTextField.text.toInt()!
         let conversionConstant = 30
-        numberFromTextField += conversionConstant
         convertedLabel.hidden = false
-        convertedLabel.text = "\(numberFromTextField)"
+        convertedLabel.text = "European Shoe Size = \(sizeFromTextField + conversionConstant)"
     }
     
     override func viewDidLoad() {
